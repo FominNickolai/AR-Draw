@@ -7,19 +7,55 @@
 //
 
 import UIKit
+import ARKit
 
 class ViewController: UIViewController {
+    
+    //MARK: - @IBOutlets
 
+    @IBOutlet weak var sceneView: ARSCNView!
+    
+    //MARK: - Properties
+    
+    let configuration = ARWorldTrackingConfiguration()
+    
+    //MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        self.sceneView.showsStatistics = true
+        self.sceneView.session.run(configuration, options: [])
+        
+        self.sceneView.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: @IBActions
+    
+    @IBAction func drawBtnPressed(_ sender: UIButton) {
     }
-
-
+    
 }
+
+extension ViewController: ARSCNViewDelegate {
+    
+    func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+        print("rendering")
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
