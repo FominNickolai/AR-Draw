@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,12 +22,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73K-Qr-oh5">
-                                <rect key="frame" x="154.5" y="602" width="65" height="45"/>
+                                <rect key="frame" x="132" y="613.5" width="112.5" height="33.5"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="u35-VD-lD0"/>
-                                    <constraint firstAttribute="width" constant="65" id="yq1-o5-i2U"/>
-                                </constraints>
                                 <state key="normal" title="Draw"/>
                                 <connections>
                                     <action selector="drawBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bk7-ea-y4b"/>
@@ -36,8 +33,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="73K-Qr-oh5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0tS-s0-aRy"/>
+                            <constraint firstItem="73K-Qr-oh5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="3mX-OB-t1g"/>
                             <constraint firstItem="sBc-Jm-caT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="E4r-s6-QKx"/>
                             <constraint firstItem="sBc-Jm-caT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hct-nj-Pdb"/>
+                            <constraint firstItem="73K-Qr-oh5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="Pqh-0a-QJy"/>
                             <constraint firstItem="sBc-Jm-caT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cfO-bd-YSB"/>
                             <constraint firstItem="sBc-Jm-caT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ulC-PN-uJW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="73K-Qr-oh5" secondAttribute="bottom" constant="20" id="wIY-ly-h9b"/>
@@ -51,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+            <point key="canvasLocation" x="115.5" y="117.5"/>
         </scene>
     </scenes>
 </document>
